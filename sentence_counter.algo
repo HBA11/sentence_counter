@@ -1,0 +1,21 @@
+ALGORITHM sentence_counter
+VAR
+    L, n_word, n_vowel : INTEGER := 0;
+    sent : CHAR := '';
+BEGIN
+ Read(sent);
+WHILE (sent <> '.') DO
+     L := L+1;
+     IF (sent = ' ' OR sent = '.') THEN
+         n_word = n_word +1;
+     END_IF
+     IF (sent = "a" OR sent = "e" OR sent = "i" OR sent = "o" OR sent = "u" OR sent = "y") THEN
+         n_vowel = n_vowel +1;
+     END_IF
+
+ END_WHILE
+ Write("The length of the sentence is ",L);
+ Write("The number of words in the sentence is ",n_word);
+ Write("he number of vowels in the sentence. is ",n_vowel);
+
+END
